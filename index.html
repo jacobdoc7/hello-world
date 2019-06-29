@@ -1,1 +1,90 @@
-<h1> hello world</h1>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title><h1>DRTL - Every BIT Matters</h1></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#CLIENTS {background-color:red;}
+#WORK {background-color:green;}
+#LINKEDIN {background-color:blue;}
+#CONTACT US {background-color:orange;}
+</style>
+</head>
+
+<body>
+
+	<div id="CLIENTS" class="tabcontent">
+  <h1>CLIENTS</h1>
+  <p>Organization I have Worked with</p>
+</div>
+
+<div id="WORK" class="tabcontent">
+  <h1>WORK</h1>
+  <p>WORK is the capital of France.</p> 
+</div>
+
+<div id="LINKEDIN" class="tabcontent">
+  <h1>LINKEDIN</h1>
+  <p>LINKEDIN profile overview</p>
+	
+</div>
+
+<div id="CONTACT US" class="tabcontent">
+  <h1>CONTACT US</h1>
+  <p>CONTACT US is the capital of Norway.</p>
+</div>
+
+<button class="tablink" onclick="openCity('CLIENTS', this, 'red')" id="defaultOpen">CLIENTS</button>
+<button class="tablink" onclick="openCity('WORK', this, 'green')">WORK</button>
+<button class="tablink" onclick="window.location.href = 'www.linkedin.com/in/jacob-francis-1b792913b';">LINKEDIN</button>
+<button class="tablink" onclick="openCity('CONTACT US', this, 'orange')">CONTACT US</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+	
+</body>
+</html>
