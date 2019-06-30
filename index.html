@@ -38,5 +38,53 @@ body {font-family: "Lato", sans-serif;}
 </style>
 </head>
 
+<body>
 
+	<div id="CLIENTS" class="tabcontent">
+  <h1>CLIENTS</h1>
+  <p>Organization I have Worked with</p>
+</div>
+
+<div id="WORK" class="tabcontent">
+  <h1>WORK</h1>
+  <p>WORK is the capital of France.</p>
+</div>
+
+<div id="LINKEDIN" class="tabcontent">
+  <h1>LINKEDIN</h1>
+  <p>LINKEDIN profile overview</p>
+
+</div>
+
+<div id="CONTACT US" class="tabcontent">
+  <h1>CONTACT US</h1>
+  <p>CONTACT US is the capital of Norway.</p>
+</div>
+
+<button class="tablink" onclick="openCity('CLIENTS', this, 'red')" id="defaultOpen">CLIENTS</button>
+<button class="tablink" onclick="openCity('WORK', this, 'green')">WORK</button>
+<button class="tablink" onclick="window.location.ahref = 'www.linkedin.com/in/jacob-francis-1b792913b'">LINKEDIN</button>
+<button class="tablink" onclick="openCity('CONTACT US', this, 'orange')">CONTACT US</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
 </html>
