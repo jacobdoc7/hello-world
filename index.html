@@ -68,10 +68,10 @@
       <button class="tablink" onclick="window.location.href='http://www.linkedin.com/in/jacob-francis-1b792913b'">LINKEDIN</button>
       <button class="tablink" onclick="openCity('CONTACTUS', this, 'orange')">CONTACTUS</button>
 
-      The current date is
-      <% import datetime
-      print datetime.date.today().strftime("%d:%m:%y")
-      %>
+      <p id="date"></p>
+        <script>
+            document.getElementById("date").innerHTML = Date();
+        </script>
       <script>
                 function openCity(cityName,elmnt,color) {
                     var i, tabcontent, tablinks;
